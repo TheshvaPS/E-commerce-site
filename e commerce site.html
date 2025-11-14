@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snape’s Emporium</title>
+
+<!-- Harry Potter-like font -->
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'MedievalSharp', cursive;
+    background-color: #1c1b29;
+    color: #f3e5ab;
+    margin: 0;
+  }
+
+  header {
+    background-color: #2c2a40;
+    color: #e0c97f;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 6px #000;
+    border-bottom: 3px solid #a58a00;
+  }
+
+  nav {
+    background-color: #312f45;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #f3e5ab;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  nav a:hover {
+    color: #d6b400;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .product {
+    border: 1px solid #a58a00;
+    background: #2e2c3a;
+    padding: 10px;
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 0 0 10px #000;
+  }
+
+  .product img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .product button {
+    background-color: #a58a00;
+    color: #1c1b29;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .product button:hover {
+    background-color: #f3e5ab;
+  }
+
+  form {
+    background: #2e2c3a;
+    color: #f3e5ab;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px #000;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background: #44415e;
+    color: #fff;
+    border: 1px solid #a58a00;
+    border-radius: 4px;
+  }
+
+  .message {
+    text-align: center;
+    color: #d6b400;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Snape’s Emporium 🪄</h1>
+    <p>“Where every potion, wand, and gadget finds its master.”</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#register">Register</a>
+    <a href="#login">Login</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#about">About Us</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome!</h2>
+    <p>Enter the enchanted world of Snape’s Emporium — a magical marketplace for Apple and Samsung gadgets worthy of Hogwarts!</p>
+  </section>
+
+  <section id="products">
+    <h2>Magical Product Items</h2>
+
+    <!-- Apple Products -->
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone15-pro-max" alt="iPhone 15 Pro">
+      <h3>Apple iPhone 17 Pro Max (2TB)</h3>
+      <p>Price: ₹2,49,999</p>
+      <button onclick="addToCart('Apple iPhone 17 Pro Max')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-watch-series9" alt="Apple Watch">
+      <h3>Apple Watch Series 9</h3>
+      <p>Price: ₹68,999</p>
+      <button onclick="addToCart('Apple Watch Series 9')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-m2" alt="MacBook Air">
+      <h3>MacBook Pro M5 (16" 2TB)</h3>
+      <p>Price: ₹3,49,999</p>
+      <button onclick="addToCart('MacBook Pro M5')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-pro-13" alt="iPad Pro">
+      <h3>iPad Pro</h3>
+      <p>Price: ₹29,999</p>
+      <button onclick="addToCart('iPad Pro')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-pro-2" alt="AirPods Pro">
+      <h3>AirPods Pro (3rd Gen)</h3>
+      <p>Price: ₹39,999</p>
+      <button onclick="addToCart('AirPods Pro (3rd Gen)')">Add to Cart</button>
+    </div>
+
+    <!-- Samsung Products -->
+    <div class="product">
+      <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-s928bzbgins/gallery/in-galaxy-s24-ultra" alt="Samsung S24 Ultra">
+      <h3>Samsung Galaxy S25 Ultra (1TB)</h3>
+      <p>Price: ₹1,49,999</p>
+      <button onclick="addToCart('Samsung Galaxy S25 Ultra')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-watch6" alt="Galaxy Watch">
+      <h3>Samsung Galaxy Watch 6</h3>
+      <p>Price: ₹36,999</p>
+      <button onclick="addToCart('Samsung Galaxy Watch 6')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-tab-s9" alt="Galaxy Tab S9">
+      <h3>Samsung Galaxy Tab S9</h3>
+      <p>Price: ₹68,999</p>
+      <button onclick="addToCart('Samsung Galaxy Tab S9')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-buds2-pro" alt="Galaxy Buds">
+      <h3>Samsung Galaxy Buds2 Pro</h3>
+      <p>Price: ₹32,999</p>
+      <button onclick="addToCart('Samsung Galaxy Buds2 Pro')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-f956bzgains/gallery/in-galaxy-z-fold5" alt="Galaxy Z Fold5">
+      <h3>Samsung Galaxy Z Fold5 (1TB)</h3>
+      <p>Price: ₹1,49,999</p>
+      <button onclick="addToCart('Samsung Galaxy Z Fold5')">Add to Cart</button>
+    </div>
+
+    <h3>Your Cart:</h3>
+    <ul id="cartList"></ul>
+  </section>
+
+  <section id="register">
+    <h2>Register at Snape’s Emporium</h2>
+    <form onsubmit="registerUser(event)">
+      <input type="text" id="regName" placeholder="Enter your name" required>
+      <input type="email" id="regEmail" placeholder="Enter your email" required>
+      <input type="password" id="regPass" placeholder="Enter password" required>
+      <button type="submit">Register</button>
+      <p id="regMsg" class="message"></p>
+    </form>
+  </section>
+
+  <section id="login">
+    <h2>Login to Snape’s Emporium</h2>
+    <form onsubmit="loginUser(event)">
+      <input type="email" id="logEmail" placeholder="Enter your email" required>
+      <input type="password" id="logPass" placeholder="Enter password" required>
+      <button type="submit">Login</button>
+      <p id="logMsg" class="message"></p>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: snape@emporium.com</p>
+    <p>Address: Diagon Alley, Chennai, TamilNadu 🏰</p>
+  </section>
+
+  <section id="about">
+    <h2>About Snape’s Emporium</h2>
+    <p>Founded by Professor Severus Snape himself, this store blends magic and technology to create an enchanting shopping experience for wizards and muggles alike.</p>
+  </section>
+
+  <script>
+    let cart = [];
+    function addToCart(item) {
+      cart.push(item);
+      document.getElementById("cartList").innerHTML = cart.map(x => `<li>${x}</li>`).join("");
+    }
+
+    function registerUser(event) {
+      event.preventDefault();
+      const email = document.getElementById("regEmail").value;
+      const pass = document.getElementById("regPass").value;
+
+      if (pass.length < 6) {
+        document.getElementById("regMsg").textContent = "Password must be at least 6 characters!";
+        document.getElementById("regMsg").style.color = "red";
+      } else {
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPass", pass);
+        document.getElementById("regMsg").textContent = "Registration Successful!";
+        document.getElementById("regMsg").style.color = "#d6b400";
+      }
+    }
+
+    function loginUser(event) {
+      event.preventDefault();
+      const email = document.getElementById("logEmail").value;
+      const pass = document.getElementById("logPass").value;
+
+      const storedEmail = localStorage.getItem("userEmail");
+      const storedPass = localStorage.getItem("userPass");
+
+      if (email === storedEmail && pass === storedPass) {
+        document.getElementById("logMsg").textContent = "Welcome back to Snape’s Emporium!";
+        document.getElementById("logMsg").style.color = "#d6b400";
+      } else {
+        document.getElementById("logMsg").textContent = "Incorrect Potion... Try again!";
+        document.getElementById("logMsg").style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
